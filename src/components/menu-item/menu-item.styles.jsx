@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const MenuItemContainer = styled.div`
+    height: ${({ size }) => (size ? '380px' : '240px')};
     min-width: 30%;
-    height: 240px;
     flex: 1 1 auto;
     display: flex;
     align-items: center;
@@ -14,18 +14,14 @@ export const MenuItemContainer = styled.div`
     &:hover {
     cursor: pointer;
 
-    & .background-image {
-        transform: scale(1.1);
-        transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
-    }
+        & .background-image {
+            transform: scale(1.1);
+            transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+        }
 
-    & .content {
-        opacity: 0.9;
-    }
-    }
-
-    &.large {
-    height: 380px;
+        & .content {
+            opacity: 0.9;
+        }
     }
 
     &:first-child {
@@ -49,18 +45,18 @@ export const ContentContainer = styled.div`
     background-color: white;
     opacity: 0.7;
     position: absolute;
+`
 
-    h1 {
-        font-weight: bold;
-        margin: 0 6px 0;
-        font-size: 22px;
-        color: #4a4a4a;
-    }
+export const TitleContainer = styled.span`
+    font-weight: bold;
+    margin-bottom: 6px;
+    font-size: 22px;
+    color: #4a4a4a;
+`
 
-    span {
-        font-weight: lighter;
-        font-size: 16px;
-    }
+export const SubtitleContainer = styled.span`
+    font-weight: lighter;
+    font-size: 16px;
 `
 
 export const BackgroundImageContainer = styled.div`
